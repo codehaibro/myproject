@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&display=swap');
+
+    .day {
+        background-color: coral;
+        color: aliceblue;
+    }
+
+    .Bes {
+        background-color: aqua;
+    }
+
+    .ScT {
+        background-color: antiquewhite;
+
+    }
+
+
+
+
+    .s:nth-child(odd) {
+        background-color: antiquewhite;
+    }
+
+    .s:nth-child(even) {
+        background-color: aqua;
+    }
+
+
+
+    .t3,
+    .t1:nth-child(odd) {
+        background-color: antiquewhite;
+    }
+
+    .t,
+    .t1:nth-child(even) {
+        background-color: antiquewhite;
+    }
+
+    .t4,
+    .t2:nth-child(odd) {
+        background-color: aqua;
+    }
+
+    .t2:nth-child(even) {
+        background-color: aqua;
+    }
+
+
+
+    .monday {
+        background-color: rgba(245, 212, 47);
+        color: white;
+    }
+
+    .tuesday {
+        background-color: blue;
+        color: white;
+    }
+
+    .Wednesday {
+        background-color: green;
+        color: white;
+    }
+
+    caption {
+        margin: 15px;
+        border: 0px solid black;
+        padding: 10px;
+        border-radius: 30px;
+        width: 200px;
+        margin-left: 35%;
+        background-color: blueviolet;
+        color: aliceblue;
+        cursor: pointer;
+    }
+
+    caption:hover {
+        background-color: burlywood;
+        color: blue;
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    table {
+        text-align: center;
+        margin: 28%;
+        margin-top: 50px;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    div {
+
+        width: 1540px;
+        height: 722px;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(img/pic3.jpg);
+
+        position: fixed;
+    }
+
+    }
+</style>
+
+<body>
+    <div>
+
+        <table class="table" border="2" cellspacing="0" height="400px" width="40%">
+        <caption>  <a style="text-decoration: none" href="index.html">USER INFORMATION</a></caption>
+
+            <tr class="day">
+                <th rowspan="3">Day</th>
+                <th colspan="3">Seminar</th>
+
+            </tr>
+
+            <tr class="ScT ">
+                <th colspan="2">Scedule</th>
+                <th class="topic" rowspan="2">Topic </th>
+            </tr>
+
+            <tr class="Bes">
+                <th>Begin</th>
+                <th>Start</th>
+            </tr>
+
+
+            <tr>
+                <td class="monday" rowspan="2">Monday</td>
+                <td class="t1" rowspan="2">8:00 Am</td>
+                <td class="t1" rowspan="2">5:00 Pm</td>
+                <td class="s">Introduction to XML</td>
+            </tr>
+            <tr>
+
+                <td class="s">Validity DTD and Relax NG</td>
+            </tr>
+
+            <tr>
+                <td class="tuesday" rowspan="3">Tuesday</td>
+                <td class="t2">8:00 Am</td>
+                <td class="t2">11:00 Am</td>
+                <td class="s" rowspan="1">XPath</td>
+            </tr>
+
+            <tr>
+                <td class="t3">11:00 Am</td>
+                <td class="t3">2:00 Pm</td>
+                <td class="s" rowspan="2">XSL Transformations</td>
+            </tr>
+            <tr>
+                <td class="t4">2:00 Pm</td>
+                <td class="t4">5:00 Pm</td>
+            </tr>
+            <tr>
+                <td class="Wednesday" rowspan="">Wednesday</td>
+                <td class="t">8:00 Am</td>
+                <td class="t">12:00 Pm</td>
+                <td class="s">XSL Formatting Objects</td>
+            </tr>
+
+
+        </table>
+
+    </div>
+</body></html>

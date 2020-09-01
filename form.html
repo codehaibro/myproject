@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 100px;
+    }
+
+
+
+    .contact-box {
+        max-width: 850px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+    }
+
+    .left {
+        background-color: aquamarine;
+        background-size: cover;
+        height: 100%;
+        grid-auto-columns: 10px;
+
+    }
+
+    .right {
+        padding: 25px 40px;
+    }
+
+    h2 {
+        position: relative;
+        padding: 0 0 10px;
+        margin-bottom: 10px;
+        color: blueviolet;
+    }
+
+    .left>h2 {
+        position: relative;
+        padding: 20px 0 10px;
+        margin-bottom: 10px;
+        color: brown;
+
+    }
+
+
+
+    .field {
+        width: 100%;
+        border: 2px solid rgba(0, 0, 0, 0);
+        outline: none;
+        background-color: rgba(230, 230, 230, 0.6);
+        padding: 0.5rem 1rem;
+        font-size: 1.1rem;
+        margin-bottom: 22px;
+        transition: .3s;
+    }
+
+    .field:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    textarea {
+        min-height: 100px;
+    }
+
+    .btn {
+        width: 25%;
+        padding: 0.5rem 1rem;
+        background-color: #2ecc71;
+        color: #fff;
+        font-size: 1.1rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 30px;
+        transition: .3s;
+    }
+
+    .btn:hover {
+        background-color: #27ae60;
+    }
+
+    .field:focus {
+        border: 2px solid rgba(30, 85, 250, 0.47);
+        background-color: #fff;
+    }
+
+    @media screen and (max-width: 880px) {
+        .contact-box {
+            grid-template-columns: 1fr;
+        }
+
+        .left {
+            height: 200px;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="contact-box">
+            <div class="left">
+                <h2>Our Contacts</h2>
+                <h3><label>Email </label></h3>
+                <p>Johnwick89@gmail.com</p><br>
+                <h3><label>Address </label></h3>
+                <p>Mr John Smith. 132, My Street, Kingston, New York 12401.</p>
+            </div>
+            <form action="index.html" onsubmit="return validation()">
+                <div class="right">
+                    <h2>Send us a message</h2>
+                    <input type="text" class="field" id="name" name="uname" placeholder="Your Name">
+                    <input type="email" class="field" name="email" id="emailid" placeholder="Your Email" required>
+                    <input type="text" class="field" name="skype" id="skypeid" placeholder="Skype ID">
+                    <input type="text" class="field" name="topic" id="topicid" placeholder="Topic">
+                    <textarea placeholder="Message" name="area" id="inparea" class="field"></textarea>
+                    <button onclick="validation()" class="btn">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script>
+        function validation() {
+
+            var name = document.getElementById("name").value;
+            var emailid = document.getElementById("emailid").value;
+            var skypeid = document.getElementById("skypeid").value;
+            var topicid = document.getElementById("topicid").value;
+            var inparea = document.getElementById("inparea").value;
+
+            if ( name == '' || name.length< 4 ) {
+
+                alert("Please enter your name atleast in 5 chars.");
+                return false;
+            }
+                else
+            {
+                true;
+            }
+            
+
+
+            if (emailid.length< 6) {
+                alert("Please enter valid email id and greater than 6 chars.");
+                return false;
+            } 
+            else{
+                true;
+            }
+           
+
+
+            if (skypeid == '' || skypeid.isNumber=='' || skypeid.length< 6) {
+                alert("Skype Id length should be greater than 6 char.");
+                return false;
+            }
+            else{
+                true
+            }
+            
+
+            if (topicid == '' || topicid.trim() == '') {
+                alert("Please write a relevant topic.");
+                return false;
+            } 
+
+
+            if (inparea.length<10) {
+                alert("Messege must be greater than 10 chars.");
+                return false;
+            }
+             
+            alert("Your message have been submitted...");
+            return true;
+            
+        
+
+           
+
+        }
+    </script>
+</body></html>
